@@ -22,12 +22,12 @@ const Home = () => {
 
   return (
     <>
-      <div>Home</div>
+      <div className={styles.Home}>Home</div>
       <div className={styles.artList}>
         <ArtDetail imgUrl={imageUrl} title={artTitle} />
       </div>
     </>
   );
 };
-
+//"artworks?page=2&limit=100"
 export default Home;
