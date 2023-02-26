@@ -27,7 +27,7 @@ const Home = () => {
         console.log(res.data.data);
         let list: Array<any> = [];
         res.data.data.map((info: any) => {
-          let imgUrl: string = `https://www.artic.edu/iiif/2/${info.image_id}/full/250,/0/default.jpg`;
+          let imgUrl: string = `https://www.artic.edu/iiif/2/${info.image_id}/full/250,250/0/default.jpg`;
           let title: string = info.artist_display;
           let artDetail = ArtDetail({ imgUrl, title });
           console.log(artDetail);

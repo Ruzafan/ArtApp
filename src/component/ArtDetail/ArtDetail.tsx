@@ -9,7 +9,7 @@ interface IArtDetailModel {
 const ArtDetail = ({ imgUrl, title }: IArtDetailModel) => {
   return (
     <div className={styles.artDetail}>
-      <div>
+      <div className={styles.container}>
         <img src={imgUrl} alt="piece of art" className={styles.image} />
         <p className={styles.title}>{title}</p>
       </div>

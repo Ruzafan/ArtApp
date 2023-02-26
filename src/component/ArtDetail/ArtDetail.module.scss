@@ -4,8 +4,21 @@
     border-radius: 2%;
     box-shadow: 5px 5px 4px rgb(198 203 211);
     background-color: white;
-    .title{
+    flex-grow: 1;
+    width: 30%;
 
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .title{
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        text-align: center;
+        margin: 0 auto;
     }
 
     .image{
