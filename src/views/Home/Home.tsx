@@ -7,6 +7,7 @@ const Home = () => {
 
   return (
     <>
+      <div className={styles.Home}>Home</div>
       <ArtList />
     </>
   );
