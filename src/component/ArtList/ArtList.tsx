@@ -20,9 +20,9 @@ const ArtList = () => {
         res.data.data.map((info: any) => {
           let imgUrl: string = `https://www.artic.edu/iiif/2/${info.image_id}/full/250,250/0/default.jpg`;
           let title: string = info.artist_display;
-          let artDetail = ArtDetail({ imgUrl, title });
-          console.log(artDetail);
-          list.push(artDetail);
+          let id: string = info.id;
+
+          list.push(ArtDetail({ id, imgUrl, title }));
         });
         console.log(artList);
         setArtList([...artList, ...list]);
