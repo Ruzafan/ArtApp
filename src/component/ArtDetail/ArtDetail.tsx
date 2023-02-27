@@ -1,14 +1,10 @@
 import React from "react";
 import styles from "./ArtDetail.module.scss";
 import { useNavigate } from "react-router-dom";
+import ArtInfo from "models/ArtInfo";
 
-interface IArtDetailModel {
-  id: string;
-  imgUrl: string;
-  title: string;
-}
 
-const ArtDetail = ({ id, imgUrl, title }: IArtDetailModel) => {
+const ArtDetail = ({ id, imgUrl, title }: ArtInfo) => {
   const navigate = useNavigate();
   const handleOnClick = () => navigate("/detail?id=" + id);
   return (
@@ -22,18 +18,3 @@ const ArtDetail = ({ id, imgUrl, title }: IArtDetailModel) => {
 };
 
 export default ArtDetail;
-
-/*artService
-    .get("artworks/129884")
-    .then((res) => {
-      console.log(res);
-      console.log(res.data);
-      setArtTitle(res.data.data.artist_display);
-      setImageUrl(
-        `https://www.artic.edu/iiif/2/${res.data.data.image_id}/full/250,/0/default.jpg`
-      );
-    })
-    .catch(console.error)
-    .finally(() => {
-      //setLoading(false)
-    });*/

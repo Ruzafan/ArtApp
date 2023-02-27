@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import styles from "./ArtList.module.scss";
 import ArtDetail from "../ArtDetail/ArtDetail";
 import { artService } from "services/http";
+import ArtInfo from "models/ArtInfo";
 
 const ArtList = () => {
   let [artList, setArtList] = useState<Array<any>>([]);
@@ -22,7 +23,7 @@ const ArtList = () => {
           let title: string = info.artist_display;
           let id: string = info.id;
 
-          list.push(ArtDetail({ id, imgUrl, title }));
+          list.push(<ArtDetail id={id}  imgUrl={imgUrl} title={ title} />);
         });
         console.log(artList);
         setArtList([...artList, ...list]);
