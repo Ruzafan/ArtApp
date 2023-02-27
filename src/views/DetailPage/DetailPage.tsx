@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 
 const DetailPage = () => {
   let { id } = useParams<string>();
+  console.log(id);
   let [imgUrl, setImageUrl] = useState<string>();
   let [title, setTitle] = useState<string>();
   useEffect(() => {

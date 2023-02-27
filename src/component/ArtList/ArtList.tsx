@@ -7,7 +7,7 @@ import ArtInfo from "models/ArtInfo";
 const ArtList = () => {
   let [artList, setArtList] = useState<Array<any>>([]);
   let [page, setPage] = useState<number>(1);
-  let limit = 10;
+  let limit = 9;
   useEffect(() => {
     loadImages();
   }, []);
@@ -23,7 +23,7 @@ const ArtList = () => {
           let title: string = info.artist_display;
           let id: string = info.id;
 
-          list.push(<ArtDetail id={id}  imgUrl={imgUrl} title={ title} />);
+          list.push(<ArtDetail id={id} imgUrl={imgUrl} title={title} />);
         });
         console.log(artList);
         setArtList([...artList, ...list]);

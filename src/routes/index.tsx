@@ -15,7 +15,7 @@ const routes: RouteObject[] = [
         element: <Home />,
       },
       {
-        path: "/detail/*",
+        path: "/detail/:id",
         element: <DetailPage />,
       },
       { path: "*", element: <h2>404: No existe</h2> },

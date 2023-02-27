@@ -3,10 +3,9 @@ import styles from "./ArtDetail.module.scss";
 import { useNavigate } from "react-router-dom";
 import ArtInfo from "models/ArtInfo";
 
-
 const ArtDetail = ({ id, imgUrl, title }: ArtInfo) => {
   const navigate = useNavigate();
-  const handleOnClick = () => navigate("/detail?id=" + id);
+  const handleOnClick = () => navigate("/detail/" + id);
   return (
     <div className={styles.artDetail} onClick={handleOnClick}>
       <div className={styles.container}>
